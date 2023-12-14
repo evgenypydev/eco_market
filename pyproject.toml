@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "eco-market"
+version = "0.1.0"
+description = ""
+authors = ["Evgeny <evgeny.korolev555@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0"
+djangorestframework = "^3.14.0"
+python-dotenv = "^1.0.0"
+drf-yasg = "^1.21.7"
+pillow = "^10.1.0"
+cloudinary = "^1.37.0"
+setuptools = "^69.0.2"
+django-phonenumber-field = "^7.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
