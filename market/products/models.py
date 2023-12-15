@@ -3,7 +3,7 @@ from django.db import models
 class Category(models.Model):
     categories = [
         ("fruits", "fruits"),
-        ("dried fruit", "dried fruit"),
+        ("dried fruits", "dried fruits"),
         ("vegetables", "vegetables"),
         ("greens", "greens"),
         ("tea coffee", "tea coffee"),
