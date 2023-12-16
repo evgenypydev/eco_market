@@ -1,7 +1,9 @@
+from rest_framework.relations import StringRelatedField
 from rest_framework.serializers import ModelSerializer
 from .models import Product, Category
 
 class ProductCRUDSerializer(ModelSerializer):
+    category = StringRelatedField()
 
     class Meta:
         model = Product
