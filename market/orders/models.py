@@ -1,16 +1,17 @@
 from django.db import models
 
 from products.models import Product
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Order(models.Model):
-    phone_number = models.CharField(max_length=20)
+    phone_number = PhoneNumberField()
     address = models.TextField()
     landmark = models.CharField(max_length=100, blank=True, null=True)
     comment = models.TextField(blank=True, null=True)
     products = models.ManyToManyField(Product, through='OrderItem')
-    total_price = models.FloatField()
-    delivery_price = models.FloatField()
+    total_price = models.FloatField(null=True, blank=True)
+    delivery_price = models.FloatField(null=True, blank=True)
     order_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
