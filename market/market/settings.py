@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'drf_yasg',
 
     'products',
+    'users',
     'orders',
 ]
 
