@@ -12,7 +12,7 @@ class Category(models.Model):
     title = models.CharField(choices=categories, max_length=15)
 
     def __str__(self):
-        return self.title
+        return f"{self.id}-{self.title}"
 
     class Meta:
         verbose_name = "Category"
@@ -27,7 +27,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.title} - {self.capacity} - {self.price}"
+        return f"{self.id}-{self.title} - {self.capacity} - {self.price}"
 
     class Meta:
         verbose_name = "Product"
