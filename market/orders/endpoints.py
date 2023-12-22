@@ -1,10 +1,8 @@
 from rest_framework.generics import CreateAPIView, UpdateAPIView, ListAPIView, RetrieveAPIView
-from rest_framework.response import Response
-from rest_framework.views import APIView
 
 from .models import Order
 from .serializers import OrderCreateUpdateSerializer, OrderListRetrieveSerializer
-import phonenumbers
+
 
 
 class OrderCreateAPIView(CreateAPIView):
