@@ -10,6 +10,7 @@ class Category(models.Model):
         ("milk products", "milk products"),
     ]
     title = models.CharField(choices=categories, max_length=15)
+    image = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.id}-{self.title}"
@@ -21,6 +22,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     title = models.CharField(max_length=50)
+    image = models.URLField(blank=True, null=True)
     capacity = models.PositiveIntegerField()
     description = models.TextField(max_length=150)
     price = models.FloatField()
