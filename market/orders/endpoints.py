@@ -4,7 +4,6 @@ from .models import Order
 from .serializers import OrderCreateUpdateSerializer, OrderListRetrieveSerializer
 
 
-
 class OrderCreateAPIView(CreateAPIView):
     queryset = Order.objects.all()
     serializer_class = OrderCreateUpdateSerializer
